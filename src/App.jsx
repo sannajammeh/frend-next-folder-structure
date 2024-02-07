@@ -17,7 +17,7 @@ const components = {
       },
       {
         type: "directory",
-        name: "Selects",
+        name: "Select",
       }
     ] },
     { name: 'Providers.tsx', type: 'file' },
