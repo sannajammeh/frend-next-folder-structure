@@ -3,14 +3,23 @@ import { Tree } from '@geist-ui/core';
 const app = {
   type: 'directory',
   name: 'app',
-  files: [{ name: 'page.tsx' }],
+  files: [{ name: 'page.tsx' }, {name: "page.module.css"}],
 };
 
 const components = {
   type: 'directory',
   name: 'components',
   files: [
-    { name: 'ui', type: 'directory', extra: 'UI Library' },
+    { name: 'ui', type: 'directory', extra: 'UI Library', files: [
+      {
+        type: "directory",
+        name: "Button",
+      },
+      {
+        type: "directory",
+        name: "Selects",
+      }
+    ] },
     { name: 'Providers.tsx', type: 'file' },
   ],
 };
