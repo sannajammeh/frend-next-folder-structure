@@ -17,8 +17,26 @@ const components = {
       },
       {
         type: "directory",
-        name: "Select",
-      }
+        name: "Accordion",
+        files: [
+          {
+            type: "file",
+            name: "AccordionPrimitives.tsx",
+            extra: "prefer no interactivity"
+          },
+          {
+            type: "file",
+            name: "Accordion.tsx",
+            extra: "Wrapper component"
+          },
+          {
+            type: "file",
+            name: "index.ts",
+            extra: "Exports both AccordionPrimitives & Accordion"
+          }
+        ]
+      },
+      
     ] },
     { name: 'Providers.tsx', type: 'file' },
   ],
