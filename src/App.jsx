@@ -6,6 +6,12 @@ const app = {
   files: [{ name: 'page.tsx' }, {name: "page.module.css"}],
 };
 
+const bloks = {
+  type: "directory",
+  name: "bloks",
+  files: [{name: "index.ts", type: "file"}]
+}
+
 const components = {
   type: 'directory',
   name: 'components',
@@ -38,6 +44,9 @@ const components = {
       },
       
     ] },
+    {
+      name: "icons", type: "directory"
+    },
     { name: 'Providers.tsx', type: 'file' },
   ],
 };
@@ -85,33 +94,26 @@ const features = {
       ],
     },
     {
-      type: 'directory',
-      name: 'Showroom',
-      files: [
-        {
-          type: 'file',
-          name: 'styles.module.css',
-        },
-        {
-          type: 'file',
-          name: 'actions.ts',
-          extra: 'Server actions only',
-        },
-        {
-          type: 'file',
-          name: 'hooks.ts',
-          extra: "feature's hooks",
-        },
-        {
-          type: 'file',
-          name: 'ShowroomDashboard.tsx',
-        },
-        {
-          type: 'directory',
-          name: 'NestedFeature',
-        },
-      ],
+      type: "directory",
+      name: "PLP",
+      files: [{
+        name: "PLPContainer.tsx",
+        type: "file"
+      }]
     },
+    {
+      type: "directory",
+      name: "products",
+      extra: "product category features",
+      files: [{
+        name: "ProductCard",
+        type: "directory",
+        files: [
+          {name: "ProductCard.tsx", type: "file", extra: "Imports from UI lib"}
+        ]
+      }]
+    },
+    
   ],
 };
 
@@ -119,7 +121,7 @@ const files = [
   {
     type: 'directory',
     name: 'src',
-    files: [app, components, features, hooks, lib, styles],
+    files: [app, components, bloks, features, hooks, lib, styles],
   },
 ];
 
